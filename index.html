@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양성인-attr tab</title>
+    <script src="./script/jquery-1.11.3.js"></script>
+    <script>
+        //이미지 속성 선택하여 텝 메뉴 제작하기: 각각의 btn 클릭시 img 속성(scr)변경
+        $(function(){
+            $(".btn1").on("click",function(){
+                $(".frame img").attr({"src":"./images/01_em1.jpg","alt":"이모티콘1"})     
+            });
+            $(".btn2").on("click",function(){
+                $(".frame img").attr({"src":"./images/01_em2.jpg","alt":"이모티콘2"})     
+            });
+            $(".btn3").on("click",function(){
+                $(".frame img").attr({"src":"./images/01_em3.jpg","alt":"이모티콘3"})     
+            });
+            $(".btn4").on("click",function(){
+                $(".frame img").attr({"src":"./images/02_logo.jpg","alt":"로고"})     
+            });
+            $(".btn5").on("click",function(){
+                $(".frame img").attr({"src":"./images/03_resposiveweb.jpg","alt":"반응형웹"})     
+            });
+        });
+
+
+    </script>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul,li {margin: 0;padding: 0;list-style: none;}
+        body {background: #dedede;}
+        #pf {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+        #pf ul{display: flex;justify-content: space-between;}
+        #pf ul li a{background: #000;font-size: 14px;text-decoration: none;color: #fff;
+            width: 135px;padding: 10px 0 10px 0;
+            display: block;text-align: center; border-top-left-radius: 10px;border-top-right-radius: 10px;} 
+            #pf ul li a:hover{background: rgb(82, 81, 81);}
+            #pf ul li a:focus{background: rgb(38, 34, 34);} 
+        #pf .frame img {border:1px solid #000;}
+            
+    </style>
+</head>
+<body>
+    <div id="pf">
+        <div class="menu">
+            <!-- ul>li*5>a.btn${폿폴명} -->
+            <ul>
+                <li><a href="#" class="btn1">이모티콘1</a></li>
+                <li><a href="#" class="btn2">이모티콘2</a></li>
+                <li><a href="#" class="btn3">이모티콘3</a></li>
+                <li><a href="#" class="btn4">황금비율</a></li>
+                <li><a href="#" class="btn5">반응형웹</a></li>
+            </ul>
+        </div>
+        <div class="frame">
+            <a href="#"><img src="./images/01_em1.jpg" alt="이모티콘1"></a>
+        </div>
+    </div>
+</body>
+</html>
